@@ -12,7 +12,7 @@ RABBITMQ_URL = os.getenv("RABBITMQ_URL", "amqp://guest:guest@localhost:5672/")
 
 broker = RabbitBroker(RABBITMQ_URL)
 
-@broker.subscribe("corridas_finalizadas")
+@broker.subscriber("corridas_finalizadas")
 async def handle_corrida_finalizada(msg: str):
     try:
         print("Mensagem recebida no tópico 'corridas_finalizadas'. Processando...")
