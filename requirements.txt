@@ -1,0 +1,9 @@
+fastapi
+uvicorn[standard]
+faststream[rabbit]
+motor
+redis
+pymongo
+pydantic
+pydantic-settings
+python-dotenv
